@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+</head>
+<!-- for bootsrap u need to include it via cdn as not installed in my system so pasting link in head  -->
+<body>
+     <!--
+      Bootstrap Table Notes (for students)
+      - `container` centers content and adds horizontal padding.(In Bootstrap, .container is a layout class that centers content, adds horizontal spacing, controls maximum width, and makes the layout responsive.)
+      - `table` adds base table styling.
+      - `table-hover` highlights a row on hover.
+      - `table-responsive` makes table scroll horizontally on small screens.
+      - `text-center` centers text in all cells.
+      - `mt-5` adds top margin spacing.
+    -->
+    <!-- <h1>Hello-Bootstrap</h1> -->
+    <div class="container">
+      <!--
+        Table Structure
+        - <thead> is for header rows (column titles).
+        - <tbody> is for data rows.
+        - <th> is a header cell, <td> is a data cell.
+      -->
+      <table class="table table-hover table-bordered table-responsive text-center mt-5">
+        <!--
+          Color Utilities
+          - `bg-danger`, `bg-primary`, `bg-warning`, `bg-success`
+            apply contextual background colors.
+          - These are Bootstrap utility classes.
+          but works when use table-danger and table-success like this instead of bg-danger(In Bootstrap, bg-danger is a general background utility class that simply applies a background color, but Bootstrap’s .table component has its own internal styling that can override row backgrounds. On the other hand, table-danger and other table-* classes are specifically designed for tables and apply the color correctly to table cells using Bootstrap’s table styling system. That’s why table-danger works properly inside a Bootstrap table while bg-danger may not show as expected.)
+
+          Use bg-danger when you want to apply a red background to normal elements like div, p, section, or card, but use table-danger when styling rows inside Bootstrap tables.
+        -->
+        <thead class="table-danger">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-primary">
+            <td>Vikas</td>
+            <td>26</td>
+            <td>123456789</td>
+          </tr>
+          <tr class="table-warning">
+            <td>Vikas</td>
+            <td>26</td>
+            <td>123456789</td>
+          </tr>
+          <tr class="table-success">
+            <td>Vikas</td>
+            <td>26</td>
+            <td>123456789</td>
+          </tr>
+          <tr class="table-danger">
+            <td>Vikas</td>
+            <td>26</td>
+            <td>123456789</td>
+          </tr>
+          <tr>
+            <td>Vikas</td>
+            <td>26</td>
+            <td>123456789</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <h1>below one is the more correct way to write table syntax</h1>
+    <div class="container">
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered text-center mt-5">
+      <thead class="table-danger">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-primary">
+          <td>Vikas</td>
+          <td>26</td>
+          <td>123456789</td>
+        </tr>
+        <tr class="table-warning">
+          <td>Vikas</td>
+          <td>26</td>
+          <td>123456789</td>
+        </tr>
+        <tr class="table-success">
+          <td>Vikas</td>
+          <td>26</td>
+          <td>123456789</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

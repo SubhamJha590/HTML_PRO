@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- form tag is like container for input fields or tags  -->
+    <form action="/action.php" id="myform">
+        <!-- label is used for putting text outside input field and toggle that input field through outside text(for this we need to put label for = soemthing = id of input tag this can be ignored can write normally label but not a good practice) and provide name field to input field The name attribute identifies form data and is used as the key when sending input values to the server(not the key that uniquely identifies here it means Key here means: it tells the backend “this value belongs to this field”.`it can be repeated (if write same name for many tags then Backend interprets it as an array or multiple values for the same key.Backend uses the name to know which field the value belongs to (name-key,input-value backend understand as key=value))). 
+
+        name is the key,Value is the user input (Without name, the input value is not sent to the server.)
+        here in input type text or pwd we dont required value because That entered value is automatically sent to the backend using the name attribute so dont use value here 
+        value is used where there is a need of prefilled data
+        placeholder provides a short hint or example text inside an input field to guide the user on what to enter. 
+        
+        id = identifies element for CSS/JS/label id is not sent to backend Only name determines the key in form submission... so id should be different for each tag-->
+        <Label for="name">First Name</Label>&nbsp;
+        <input type="text" id="name" name="fname" placeholder="Please enter first name" ><br><br>
+        <!-- nbsp means non breaking space  -->
+        <label for="name2">Last Name</label>&nbsp;   
+        <input type="text" name="lname" id="name2" placeholder="Please enter Last name"><br><br>
+        <label for="pwd">Password</label>&nbsp;
+        <input type="password" id="pwd" name="password" placeholder="enter your password">
+      <br><br>
+      <label for="email1">Email</label>&nbsp;
+      <input type="email" id="email1" name="email" placeholder="example@mail.com">
+        <!-- A radio button allows the user to select only one option from a set of options.
+        Input type: radio 
+        Grouping: Inputs that share the same name belong to the same group
+        Value sent: The value of the selected radio button is sent to the backend 
+        
+        if u make name different then multiple option can be selected in radio Browser treats them as separate groups not used genrally but can use like hobbies -->
+
+        <p>what is your gender ?</p>
+        <label for="male1">Male</label>
+        <input type="radio" id="male1" name="gender" value="male">
+        <label for="female1">Female</label>
+        <input type="radio" id="female1" name="gender" value="female">
+        <label for="other1">Other</label>
+        <input type="radio" name="gender" id="other1" value="other">
+        <br><br>
+          <!-- this create a submit button input type submit and here value doesnt send to backend it just text shown on submit button(same for reset)see below table value means differnt thing at different time -->
+        <input type="submit" value="submit"><br><br>
+        <!-- for reseting the values -->
+        <input type="reset" value="reset">
+        <br><br><br>
+        
+
+        <!-- name should be same as each option belong to same group and it allows multiple options to checkbox for same group and in other hand radio allows only one among different ... this is good practice to put same name for same groups without this things work but not in systematic way -->
+
+        <p>What are your hobbies</p>
+        <label for="hobby">Cricket</label>
+        <input type="checkbox" id="hobby" value="cricket" name="hobbyhai">
+        <label for="hobby2">FreeFire</label>
+        <input type="checkbox" name="hobbyhai" id="hobby2" value="FreeFire">
+        
+        <!-- It (Creates a clickable button,It does nothing by itself ,Used mainly to trigger JavaScript actions, Button text comes from: value attribute) -->
+        <input type="button" value="clickme" onclick="alert('Some task will be finished')">
+
+        <!-- how websites take color from us for that we need a name and value for sending data to backend (value always in hex format) -->
+        <input type="color" name="bgcolor" value="#ffffff">
+        <!-- input type="color" works by providing a built-in color picker interface from the browser, which opens when the user clicks on the input field. The color that appears initially in the picker comes from the value attribute; if a value is provided, that color is pre-selected, and if no value is set, the browser uses a default color, usually black (#000000). When the user selects a new color, the input’s value automatically updates to a hexadecimal color code in the #RRGGBB format without any manual conversion. During form submission, if the color input has a name attribute, the selected hex color is sent to the backend as a key-value pair (name = #hexcode); if no name is present, the color value is not submitted. -->
+
+
+        <input type="date" name="dob" max="2025-12-05">
+        <!-- (For input type="date", a prefilled value is not required, but it can be used if needed. If no value attribute is provided, the date field starts empty and the user selects a date using the browser’s date picker. This is the most common behavior when you want the user to actively choose a date.When a value is provided, it sets a default/pre-selected date in the picker. The value must follow the fixed format YYYY-MM-DD.) -->
+         <!-- max can be selected for making limit in date picker in same yyyy format  can select min also in the same way-->
+
+         <input type="file" name="myfile" accept=".pdf, .jpg, image/*">
+         <!-- this will alllow you to choose file from pc and accept allow accepted formats like here pdf and jpg only and all images .. separated by commas always
+         input type="file" allows the user to select a file from their device using a browser-provided file picker (so no value is used) ...for all images use image/* in accept section-->
+
+         <input type="month" min="2024-10" value="2026-01" name="month">
+         <!-- all is same as date just format is yyyy-mm  not value reuired -->
+         
+         <!-- its good practise to use name attribute because if u want form data to be submitted -->
+
+
+         <input type="time" name="time" value="12:26:19" name="instanttime">
+         <!-- default time format is HH:MM:SS -->
+
+         <input type="datetime-local" value="2025-12-01T12:36">
+         <!-- For <input type="datetime-local">, the default value is specified using the value attribute in the format YYYY-MM-DDTHH:MM (optionally :SS for seconds). Here, YYYY is the 4-digit year, MM is the 2-digit month (01–12), DD is the 2-digit day of the month (01–31), T is a literal character that separates the date and time (mandatory), HH is the 2-digit hour in 24-hour format (00–23), and MM after the T represents minutes (00–59). Optionally, seconds can be included as HH:MM:SS -->
+          
+         <!-- the value can be ignored it just for bydefault otherwise user have a option to select  -->
+
+         <input type="week" value="2026-W02" name="week">
+         <!-- For <input type="week">, the default value uses the format YYYY-Www. YYYY is the 4-digit year, W is a literal “W”, and ww is the 2-digit ISO week number (01–53). Example: <input type="week" name="projectWeek" value="2026-W05"> preselects the 5th week of 2026. -->
+
+         <input type="number" value="10" min="10" max="18" name="age" step="2">
+         <!-- input type number for random numbers from screen can define step also between min and max -->
+
+         <label for="agehai">select your age</label>
+         <input type="range" name="newage" min="0" max="30" step="1" value="5">
+         <!-- here you got range label not visible value yet but later we can see using js  -->
+
+         <select name="city" id="city1" size="2">
+          <!-- size will give how many options are visisble while selecting by default size is 1 -->
+    <option value="Delhi">delhi</option>
+    <option value="Bangalore">bangalore</option>
+    <option value="hyderabad" selected>hyderabad</option>
+    <!-- this selected makes hyderabad as default later can change and value is actual data send to backendd -->
+    <option value="kolkata">kolkata</option>
+    <!-- text betwen option is shown to user and text stored in value is sent to server can use label also for select only not for options <label> is meant only for form controls like input, select, textarea, meter, progress. <option> is not a form control by itself; it’s just a choice inside <select>.-->
+</select>
+
+ 
+     <label for="hello">Please Provide Feedback</label>
+<textarea name="Feedback" id="hello" rows="5" cols="20" placeholder="Please give your Valuable feedback" 
+style="max-width: 150px; max-height: 300px;">Please Type Your Feedback</textarea> <br>
+<!-- can set using inline css max height and width  -->
+<!-- for increase height of text area use rows  -->
+<!-- if text between textarea tag is not present then placeholder will work otherwise that text is shown and for text putting outside box we need to use label  -->
+
+
+<button type="button" onclick="alert('Hii subham jha bhai kaisa hai')">Click kr subham</button>
+<!-- same as input type button just another way to write no specific fuction same as like that  -->
+
+<!-- some more attractive forms  -->
+ <!-- fileset is for creating a separting field for form with border  -->
+ <fieldset>
+  <!-- legend for text in border of fielset  -->
+  <legend>Loginform</legend>
+  <input type="text" placeholder="enter name" list="myname">
+  <!-- connecting data list with names suggestion with option id is for connection  -->
+  <datalist id="myname">
+    <option value="SubhamJha">
+    <option value="rani">
+  </datalist>
+  <input type="password" placeholder="enter your password">
+  <input type="submit" value="Login">
+ </fieldset>
+
+    </form>
+
+    <!-- The form attribute lets an input belong to a <form> even if it is placed outside the form element put id of form in form attribute . -->
+      <input type="submit" value="submit hai bahar wala" form="myform">
+</body>
+</html>
+
+<!-- 
+| Input Type       | Role of value                     |
+| ---------------- | --------------------------------- |
+| text / password  | Default text (user can overwrite) |
+| submit / button  | Displayed button text             |
+| checkbox / radio | **Actual value sent to backend**  |
+| hidden           | **Data sent silently**            | 
+
+<input type="hidden" name="user_id" value="123">
+-->
+<!-- 
+value is visible when :- 
+
+1️⃣ Text, Password, Number Inputs(if provide value but not preffered(value in text/password inputs = default text))
+<input type="text" name="username" value="Rahul">
+<input type="password" name="pass" value="12345">
+Visible to user:
+Text input → yes, user sees “Rahul”
+Password input → no, user sees bullets ••••• (the value exists but hidden)
+Can change: User can overwrite it
+Sent to backend: Whatever the user typed
+So value is default/pre-filled text, not permanent
+
+
+2️⃣ Submit/Reset Buttons
+<input type="submit" value="Sign Up">
+<input type="reset" value="Clear Form">
+Visible to user: Yes, displayed on the button
+Sent to backend: Only if name is also provided(If you don’t have a name, nothing is sent from the submit button; only the input fields are sent that have value with name as a key.
+<input type="submit" name="action" value="Sign Up">
+When clicked, the backend receives:
+action=Sign+Up
+Here, the name is the key, and value is the data sent.)
+
+3️⃣ Checkbox / Radio Inputs
+<input type="checkbox" name="skills" value="HTML"> HTML
+<input type="radio" name="gender" value="male"> Male
+Checkbox / radio button itself → visible
+The value attribute → not directly visible; user sees the label next to it
+Sent to backend: Only if selected
+Example: If checkbox “HTML” is checked → skills=HTML
+Important: To make it clear to the user, always use a <label>
+
+4️⃣ Hidden Inputs
+<input type="hidden" name="user_id" value="123">
+Visible to user: ❌ No
+Sent to backend: ✅ Yes, value 123 is sent
+Use case: Storing data that the user shouldn’t see or edit -->
+
+
+<!-- 
+By default, a submit button in an HTML form automatically triggers the browser to collect and send all input fields that have a name attribute to the backend when clicked. The submit button itself does not need a name to perform this action; its primary role is just to trigger the form submission. The value attribute of the submit button determines the text displayed on the button and is visible to the user. However, this value is not sent to the backend unless the button also has a name attribute. When a name is provided, the button’s name and value are included in the form data, which is useful in cases with multiple submit buttons, allowing the backend to determine which button was clicked. Without a name, the submit button only serves as a trigger, and only the input fields with name attributes are submitted.
+
+The value you write on a submit button is just the text displayed on the button. It has no effect on form submission unless the button also has a name attribute. Only when name is attached, the value is sent to the backend as part of the form data. Otherwise, the button’s value is purely visual.
+
+ -->
+
+
+<!-- 
+ for form most Important
+ 1. name 2. value that are paramter as key = value for backend and for labelling there is id 
+ 2. for radio there should same names and value manually 
+ 3. for submit value dont required just for text shown can write 
+ 4. value , min and max attributes are optional-->

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- action: Specifies where to send the form-data when a form is submitted.
+    Example: action="/action_page.php" (sends to a server-side script)
+    If omitted, the action is set to the current page. -->
+    <form action="/action.php" method="post" target="_blank">
+        <!-- get method reveals the identity in url and post is not so for secured data and larger data we use post method detailed below -->
+    <!-- some attributes for input fields  -->
+    <input type="text" name="username" disabled value="radha">
+    <input type="text" name="username2" value="Subham Jha" readonly>
+    <!-- both are same but 1st one makes disabled  -->
+     <input type="email" placeholder="Enter Your email"   name="username3" autocomplete="on" required>
+     <!-- autocomplete gives suggestion and reuired make it compulsory if not fill before submiiting it wil give a popup and can make autocomplete off also  -->
+
+      <input type="submit" value="submitnow">
+      </form>
+
+     <!-- mailto: Opens the default email client to send an email.
+     tel: Initiates a phone call (on supported devices). -->
+    
+    <a href="mailto:sjha75096@gmail.com">Send Email</a>
+    <br /><br />
+    <a href="tel:+9182837838833">Call Us</a>
+       
+</body>
+</html>
+
+
+ <!-- method: Specifies the HTTP method to use when sending form-data.
+              - GET: Appends form-data to the URL in name/value pairs: URL?name=value&name=value
+                     NEVER use GET to send sensitive data! (visible in URL)
+                     Length of URL is limited (about 2048 characters)
+                     Useful for form submissions where a user wants to bookmark the result
+                     GET is better for non-secure data, like query strings in Google
+              - POST: Sends form-data as an HTTP post transaction (body of the HTTP request)
+                      Form submissions with POST cannot be bookmarked
+                      POST has no size limitations, and can be used to send large binary data (like images) -->
+
+<!--  required: Specifies that an input field must be filled out before submitting the form.
+      readonly: Specifies that an input field is read-only (cannot be changed).
+      disabled :- use to disable a form element
+                      
+
+target: Specifies where to display the response that is received after submitting the form.
+              - _blank: Opens the response in a new window or tab
+              - _self: Opens the response in the same window/tab (default)
+              - _parent: Opens the response in the parent frame
+              - _top: Opens the response in the full body of the window
+
+      autocomplete: Specifies whether a form should have autocomplete on or off.
+                    - on: The browser automatically completes values based on values that the user has entered before.
+                    - off: The user must enter a value into each field for every use, or the browser does not save entries.
+      
+      novalidate: A boolean attribute. When present, it specifies that the form-data (input) should not be validated when submitted. 
+      
+      The novalidate attribute is used in the <form> tag to disable built-in HTML validation so that custom or server-side validation can be used instead.-->

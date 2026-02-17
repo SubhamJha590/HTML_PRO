@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- supports all type of charcter encoding  -->
+    <meta charset="UTF-8">
+    <!-- In metadata, name defines WHAT kind of information the meta tag is providing, and the content attribute holds the value. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubhamDon</title>
+    <meta name="author" content="SubhamJha">
+    <meta name="description" content="digital profile made by subham jha ">
+    <meta name="keywords" content="profile,cook,weightloss"> 
+<body>
+   <!--
+      HTML History (quick notes)
+      - 1991: Tim Berners-Lee publishes the first HTML spec.
+      - 1995: HTML 2.0 becomes an IETF standard.
+      - 1997-1999: HTML 3.2 and 4.01 expand tags + introduce CSS separation.
+      - 2000: XHTML 1.0 emphasizes stricter XML-style syntax.
+      - 2014: HTML5 becomes a W3C Recommendation (semantic tags, audio/video, APIs).
+      - 2019+: HTML Living Standard maintained by WHATWG.
+    -->
+    <!-- - Semantic elements describe meaning: <header>, <main>, <article>, <section>, <footer>.
+      - Block vs inline: block elements start on a new line; inline elements flow within text.
+     -->
+
+
+
+
+
+
+
+    <h1>Subham Jha</h1>
+    <p>Baba Surdas Colony Sector-91</p>
+    <!-- can put relative image by using /  -->
+    <img src="https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" alt="girlimahe" height="300px">
+
+ <!-- headings tags Headings
+      - <h1> to <h6> define section titles.
+      - Use one <h1> per page when possible for structure.
+      - Headings create a document outline for accessibility. -->
+  <h1>This is H1</h1>
+  <h2>This is H2</h2>
+  <h3> This is H3</h3>
+  <h4> This is H4</h4>
+  <h5>This is H5</h5>
+  <h6>This is H6</h6>
+  <!-- p tag takes whole width  its a block element tag-->
+  <p>Okay</p>
+  <!-- span takes only required space not whole space as p tag does its a inline tag studied later -->
+  <span>Okay</span>
+  <!--
+      Preformatted Text
+      - <pre> preserves spaces and line breaks.
+      - Useful for code blocks or formatted text.
+    --> <hr>
+    <pre>
+        Vikas,
+        asdfghj,
+        asefdghj,
+        asdfghj
+    </pre> 
+<hr>
+
+
+
+
+  <ul type="square">
+    <li>subham</li>
+    <li>rani</li>
+    <li>akasnash</li>
+  </ul>
+ <!-- type is mainly for ol  -->
+  <ol type="I">
+    <li>subham</li>
+    <li>rani</li>
+  </ol>
+
+  <p>This is <strong>pg</strong> and <b>pg</b> both do same work</p>
+  <p>This is <em>pg</em> and <i>pg</i>both do same work</p>
+  <p>thsi is <u>underline</u></p>
+  <p>This is <s>Strikethorugh</s>and same done by <del>Strikethrough</del></p>
+  <p>This is <small>small</small> makes smnaller size as compared to normal</p>
+  <p>This is <big>Subham</big>makes bigger size as compared to normal </p>
+
+  <p>This is H <sup>2</sup>O called as superscript</p>
+  <p>This is H <sub>2</sub>O called as subscript</p>
+
+  <p id="student"><mark>This is for <b>highlighting the student section okay </b></mark></p>
+
+
+  
+
+  <!-- multimedia in html  -->
+
+  <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkev2MbkXdyE5rdtckwWW_0MmZ5fLgnWCPiiZEFIbnYuhaVCBiR66CJD1q_tFL8gtTwsqQGy_IHeY4qPWg5Zl7B7BlhVXI5VUi62I-4CafBZsM465VN0v-nDeiR0FFJGZDod8rZRwpUeq1b0Ou15Lm4T3EGecUedSWYQS79jASGyEmvWx9UuTQjCdYo=w1280" alt="no image" width="200px"><br><br><hr><br>
+  <!-- type for sometimes browser support requirements  -->
+   <!-- autoplay for automatic play when open website  -->
+  <video src="/samppple visoe.mp4"  width="200px" height="200px" controls autoplay muted></video> <br><br><hr><br>
+  <!-- here above it was modern technique for including source directly but what use most of the times is below  and some attributes like type is always defined under separate source tag not inside video its used only when only need to insert source only and video settings liek width,height,contorls etc -->
+    <video controls autoplay muted playsinline loop width="200px" 
+    poster="/watermark perma.jpg">
+    <!-- poster is like thumnail it is also used inside vidoe tag when video is not autoplayed it will seen can see after removing autoplay  -->
+    <source src="/newvbid.mp4" type="video/mp4">
+    <!-- All <source> tags inside a <video> element point to: The same video content,but in different file formats / encodings -->
+    <!-- we provide differnt formats of same file with their type if one of the format not supported by browser it will look for another format like if if browser support webm format and if i have the same video in that webm format then i will define another sourec here like below (for that we need same video in another format) similarly can define multiple formats if anyone is matche sor supported by browser just by checking source and their type it will run that video here this .webm is not have any existence here so writing below is not useful; or valid it just simply ignored as file not exists -->
+     <source src="/newvbid.webm" type="video/webm">
+      Your browser doesnt support the video tag. explain later below separately
+  </video>
+   <!-- controls(allows you to pause resume or voulme by showing buttons on video) autoplay(autoplay when muted only as some websites block video from autoplay which have default sound so dont give running video on refresh if it have a sound it need to muted first ) playsinline(prevent full screen in mobile) loop ( for contuinity )these all are used inside video tag not source poster is also used inside video -->
+
+   <video >
+    <source src="/newvbid.webm" type="video/web4m">
+    <!-- Your browser doesnt support the video tag. this is fallback msgs(Any text placed directly inside <video> or <audio> (after all <source> tags) is treated as fallback content. when browser wont support video or audio tag it will be visible but not in modern as all browser support it only visible when audio or video tag not supportable not for wrong src given for wrong src it will give black screen type or nothing .. fallback likhna is treated as just proffesional after all sources in audio and video tag  -->
+   </video>
+    
+   <!-- always try to write video tag in this long way and audio also a sshortcut also available of audio just liek video -->
+
+   <!-- audio is visible only when controls applied as its not video so it doesnt have to show naything rather than audio so directly audio cant seen without controls but without controls if use autoplay it will give u voice -->
+   <audio autoplay muted controls loop>
+    <source src="/scene.wav" type="audio/wav">
+    <!-- Modern browsers block autoplay for audio (and video with sound) by default. only play when time when code testing not after every refresh -->
+   </audio>
+
+   <!-- no source in object it directly uses data link for formats of documents like pdf or it is use for multipurpose and type is mentioned after writing application (In HTML, the type attribute specifies the MIME type of the content. like for video it is video and for audio it is audio files or for object it is appliaction) -->
+    <!-- relative file here below using /  -->
+   <object data="/smple.pdf" type="application/pdf" width="300px" height="300px"></object>
+
+   <!-- <iframe> stands for inline frame
+It embeds another HTML page or web content inside your current page
+Think of it like a window showing another webpage inside your page or can take by direct copying embed code from website
+basic syntax below 
+<iframe src="https://www.example.com" width="600" height="400"></iframe> --> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Xu0DPnqP7Q?si=IaL7DZirpzjwdrPj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="300px"></iframe>
+
+</body>
+</html>
+
+
+<!-- MIME stands for:
+
+Multipurpose Internet Mail Extensions
+Originally created for email to tell mail clients what kind of content is being sent (text, image, audio, etc.)
+Later adopted by web browsers to tell them what type of file is being delivered -->
+
+<!-- using / for relative images and videos in the same folder no need to add .(dot before / its understood in modern html5) -->

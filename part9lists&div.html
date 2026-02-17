@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* there is some predefined margin & padding so in order to make it 0 always use before styling this top line so that we can adjust margin & padding from ourside instead of using default one */
+        /* *{
+            padding: 0;
+            margin: 0;
+        } */
+        div{
+            background-color: aqua;
+        }
+        /* or can write as -> div h1{
+            color : blue ;
+        } or as stated below */
+        h1{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- div is basically a container used to group multiple elements together   -->
+    <div>
+        <h1>Hey there is H!</h1>
+        <p>this is p</p>
+    </div>
+     <div>
+        <h1>Hey there is H!</h1>
+        <p>this is p</p>
+    </div>
+     <div>
+        <h1>Hey there is H!</h1>
+        <p>this is p</p>
+    </div>
+     <div>
+        <h1>Hey there is H!</h1>
+        <p>this is p</p>
+    </div>
+     <div>
+        <h1>Hey there is H!</h1>
+        <p>this is p</p>
+    </div>
+
+    <!-- now talking about lists  -->
+     <h1> These are fruits </h1>
+     <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>papaya</li>
+     </ul>
+     <ol type="I">
+        <li>guava</li>
+        <!-- can give value and next will automatically increased by 1 whether any type roman or any type of ol sequence(a,i,I,1) as ordered list but not so use  -->
+        <li value="89">pomegranate</li>
+        <ul>
+            <!-- nesting of the list  -->
+            <li>subham</li>
+            <li>tomato</li>
+            <li>potato</li>
+        </ul>
+        <li>grapes</li>
+     </ol>
+ 
+
+    <!-- 3rd type of list is description list  -->
+       <!--
+      Description List
+      - <dl> groups terms and descriptions.
+      - <dt> term, <dd> description.
+    -->
+        <hr>
+    <dl>
+      <dt>js</dt>
+      <dd>this is programming language</dd>
+    </dl>
+    <!-- dt :- description term
+    dd :- description definiton
+    dl :- description list -->
+     
+</body>
+</html>
+
+
+<!-- css accessing can be in these way 
+  div h1{
+            color : blue ;
+        } or as stated below
+or 
+div#id anyothertaginsidediv{
+    
+} -->
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=table, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            /* border-collapse: collapse; removes the space between table cell borders and merges adjacent borders into a single border, so the borders touch each other.  */
+            border-collapse: collapse;
+        }
+        th{
+            color: brown;
+            font-size: 60px;
+            border: 2px solid blue;
+        }
+        td{
+            color: green;
+            font-size: 30px;
+            text-align: center;
+            border: 2px solid blue;
+            padding: 20px;
+        }
+        thead{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- caption tag used for heading whether u write inside anywhere it will always on the top like we write one caption below footer also ...caption tag is meant for table use only-->
+         <caption>This is my table above head</caption>
+     <thead>
+           <tr>
+            <th>first name</th>
+            <th>last name</th>
+            <th>age</th>
+        </tr>
+     </thead>
+       <tbody>
+         <tr>
+            <td>Subham</td>
+            <td>Jha</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>Shilpa</td>
+            <td>mishra</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Simran</td>
+            <td>kumari</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <!-- here rowspan cover up the space from above  -->
+            <td>gandhi</td>
+            <td>28</td>
+        </tr>
+       </tbody>
+       <tfoot>
+        <!-- colspan merges columns  -->
+        <tr>
+            <td colspan="3">This is Footer</td>
+        </tr>
+       </tfoot>
+       <caption>This is my table below footer</caption>
+    </table>
+</body>
+</html>
