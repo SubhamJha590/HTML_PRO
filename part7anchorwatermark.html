@@ -9,7 +9,9 @@
     <!-- Yes, the href attribute in an <a> tag can link to images, and by adding the download attribute, the image can be downloaded instead of opened.
     download can run independently so no need of file name always 
     You can also set a custom filename using the download attribute, while the image content itself is not affected.
-    If no filename is provided, the image is downloaded using its original filename. -->
-    <a href="/watermark perma.jpg" download="subhamdon.jpg">Download ME</a>
+    If no filename is provided, the image is downloaded using its original filename. noopener means Prevents new page from accessing window.opener 
+    (When to use ✔ External links opening in new tab ✔ Any target="_blank" link) noreffer (Hides the referrer header) nofollow (Tells search engines not to pass link authority) genrally not use if want is better seo-->
+    <a href="/watermark perma.jpg" download="subhamdon.jpg"  rel="noopener noreferrer nofollow">>Download ME</a>
+    
 </body>
 </html>
